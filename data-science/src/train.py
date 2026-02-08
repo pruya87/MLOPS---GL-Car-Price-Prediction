@@ -12,18 +12,6 @@ from sklearn.metrics import mean_squared_error
 import mlflow
 import mlflow.sklearn
 import os
-
-def select_first_file(path):
-    """Selects the first file in a folder, assuming there's only one file.
-    Args:
-        path (str): Path to the directory or file to choose.
-    Returns:
-        str: Full path of the selected file.
-    """
-    for f in os.listdir(path):
-        if f.endswith(".csv"):
-            return os.path.join(path, f)
-    raise FileNotFoundError("No CSV file found")
     
 def parse_args():
     '''Parse input arguments'''
@@ -59,8 +47,8 @@ def main(args):
     # Step 7: Log the MSE metric in MLflow for model evaluation, and save the trained model to the specified output path.  
 
     # Load datasets
-    train_df = pd.read_csv(select_first_file(args.train_data))
-    test_df = pd.read_csv(select_first_file(args.test_data))
+    train_df = pd.read_csv(args.train_data)
+    test_df = pd.read_csv(args.test_data)
 
     # Split the data into features(X) and target(y)
     y_train = train_df[TARGET_COL]  # Specify the target column
