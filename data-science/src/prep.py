@@ -51,8 +51,8 @@ def main(args):  # Write the function name for the main data preparation logic
     train_df, test_df = train_test_split(df, test_size=args.test_train_ratio, random_state=42)  #  Write code to split the data into train and test datasets
 
     # Save train and test data
-    os.makedirs(args.train_data, exist_ok=True)  # Create directories for train_data
-    os.makedirs(args.test_data, exist_ok=True)  # Create directories for test_data
+    #os.makedirs(args.train_data, exist_ok=True)  # Create directories for train_data
+    #os.makedirs(args.test_data, exist_ok=True)  # Create directories for test_data
     train_df.to_csv(os.path.join(args.train_data, "train_data.csv"), index=False)  # Specify the name of the train data file
     test_df.to_csv(os.path.join(args.test_data, "test_data.csv"), index=False)  # Specify the name of the test data file
 

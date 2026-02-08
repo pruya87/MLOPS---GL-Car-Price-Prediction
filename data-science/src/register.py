@@ -50,7 +50,7 @@ def main(args):
         "model_version": model_version.version
     }
 
-    os.makedirs(args.model_info_output_path, exist_ok=True)
+    #os.makedirs(args.model_info_output_path, exist_ok=True)
     output_file = Path(args.model_info_output_path) / "model_info.json"
 
     with open(output_file, "w") as f:
