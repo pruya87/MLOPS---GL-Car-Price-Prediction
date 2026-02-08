@@ -55,8 +55,8 @@ def main(args):  # Write the function name for the main data preparation logic
     # Save train and test data
     #os.makedirs(args.train_data, exist_ok=True)  # Create directories for train_data
     #os.makedirs(args.test_data, exist_ok=True)  # Create directories for test_data
-    train_df.to_csv(os.path.join(args.train_data, "train_data.csv"), index=False)  # Specify the name of the train data file
-    test_df.to_csv(os.path.join(args.test_data, "test_data.csv"), index=False)  # Specify the name of the test data file
+    train_df.to_csv(args.train_data, index=False)  # Specify the name of the train data file
+    test_df.to_csv(args.test_data, index=False)  # Specify the name of the test data file
     #train_df.to_csv(args.train_data), index=False)
     #test_df.to_csv(args.test_data), index=False)  
     
