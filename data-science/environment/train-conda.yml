@@ -11,4 +11,8 @@ dependencies:
       - azureml-inference-server-http
       - azureml-core==1.49.0
       - cloudpickle==1.6.0
+<<<<<<< HEAD
 name: sklearn-env
+=======
+name: sklearn-env
+>>>>>>> e9ff3bfd30445d769168fc3ad363388f3a35f6f2
